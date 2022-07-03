@@ -2,6 +2,7 @@ import { UserConfig, ConfigEnv } from 'vite';
 import { CreateVitePlugins } from './config/vite/plugins/index';
 import { CreateViteServer } from './config/vite/server/index';
 import { CreateViteBuild } from './config/vite/build/index';
+import { CreateViteResolve } from './config/vite/resolve/index';
 
 // https://vitejs.dev/config/
 export default ({ command, mode }: ConfigEnv): UserConfig => {
@@ -9,6 +10,7 @@ export default ({ command, mode }: ConfigEnv): UserConfig => {
   return {
     server: CreateViteServer(),
     plugins: CreateVitePlugins(isBuild),
-    build: CreateViteBuild(),
+    build: CreateViteBuild(isBuild),
+    resolve: CreateViteResolve(),
   };
 };

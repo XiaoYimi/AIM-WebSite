@@ -17,6 +17,8 @@ export const MOCK_TARGET = 'http://localhost:3000';
 /** 打包配置 */
 export const BUILD_TARGET = 'es2015';
 export const BUILD_MINIFY = 'terser';
+export const BUILD_DEV_OUTPUT = 'offline_dist';
+export const BUILD_PROD_OUTPUT = 'online_dist';
 export const BUILD_BROTLISIZE = false;
 export const BUILD_SOURCEMAP = false;
 export const BUILD_CHUNKSIZEWARNINGLIMIT = 2000;
